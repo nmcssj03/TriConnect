@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-panel">
+            <div class="player player-1 active" id="player1">
+                <div class="player-name">Player 1</div>
+                <div class="player-score" id="score1">0</div>
+            </div>
+            <div class="player player-2" id="player2">
+                <div class="player-name">Player 2</div>
+                <div class="player-score" id="score2">0</div>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <div class="buttons">
+                <button id="restart-btn">Restart Game</button>
+                <button id="new-game-btn">New Game</button>
+            </div>
+            <svg id="board-svg" class="board-svg" width="600" height="520"></svg>
+            <div class="game-over" id="game-over">
+                <div class="winner" id="winner-text"></div>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

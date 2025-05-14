@@ -1,0 +1,158 @@
+body {
+            font-family: 'Lato', 'Montserrat', 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('assets/TriConnect\ BG.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .game-container {
+            display: flex;  
+        }
+        
+        .score-panel {
+            padding: 20px;
+            border-radius: 10px;    
+            width: 200px;
+            height: fit-content;
+        }
+        
+        .player {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .player.active {
+            border-left: 5px solid #000000; 
+        }
+        
+        .player-1 {
+            background-color: rgba(0, 0, 255, 0.6);
+            color: #ffffff;
+        }
+        
+        .player-2 {
+            background-color: rgba(255, 0, 0, 0.6);
+            color: #ffffff;
+        }
+        
+        .player-name {
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .player-score {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .game-board {
+            width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #d86902;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #976502;
+        }
+        
+        #new-game-btn {
+            display: none;
+        }
+        
+        .board-svg {
+            display: block;
+        }
+        
+        .node {
+            fill: #333;
+            r: 6;
+            cursor: pointer;
+        }
+        
+        .line {
+            stroke: #ddd;
+            stroke-width: 5;
+            cursor: pointer;
+            transition: stroke 0.3s;
+        }
+        
+        .line:hover:not(.selected) {
+            stroke: #aaa;
+        }
+        
+        .line.selected.player-1 {
+            stroke: #0000ff;
+        }
+        
+        .line.selected.player-2 {
+            stroke: #ff0000;
+        }
+        
+        .triangle {
+            opacity: 0.5;
+        }
+        
+        .triangle.player-1 {
+            fill: #0000ff;
+        }
+        
+        .triangle.player-2 {
+            fill: #ff0000;
+        }
+        
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .winner {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .player-1-text {
+            color: #0000ff;
+        }
+        
+        .player-2-text {
+            color: #ff0000;
+        }
