@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Game constants
-    const BOARD_WIDTH = 600;
-    const NODE_RADIUS = 6;
+    const BOARD_WIDTH = 700;
+    const NODE_RADIUS = 10;
     const HORIZONTAL_SPACING = 92;
     const VERTICAL_SPACING = 75;
     
