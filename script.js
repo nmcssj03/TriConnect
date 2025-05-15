@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Game constants
     const BOARD_WIDTH = 600;
-    const LAYERS = 6;
-    const NODE_RADIUS = 5;
-    const HORIZONTAL_SPACING = 92   ;
+    const NODE_RADIUS = 6;
+    const HORIZONTAL_SPACING = 92;
     const VERTICAL_SPACING = 75;
     
     // Game state
+    let currentNumLayers = 6;
+    let firstToPlay = 1;
     let currentPlayer;
     let scores = [0, 0];
     let selectedLines = [];
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const nodes = [];
         let totalNodes = 0;
         
-        for (let layer = 1; layer <= LAYERS; layer++) {
+        for (let layer = 1; layer <= currentNumLayers; layer++) {
             const layerWidth = layer * HORIZONTAL_SPACING;
             const startX = (BOARD_WIDTH - layerWidth) / 2 + HORIZONTAL_SPACING / 2;
             
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Generate horizontal lines
-        for (let layer = 1; layer <= LAYERS; layer++) {
+        for (let layer = 1; layer <= currentNumLayers; layer++) {
             const layerNodes = nodes.filter(node => node.layer === layer);
             
             for (let i = 0; i < layerNodes.length - 1; i++) {
@@ -67,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Generate diagonal lines (right-leaning and left-leaning)
-        for (let layer = 1; layer < LAYERS; layer++) {
+        for (let layer = 1; layer < currentNumLayers; layer++) {
             const currentLayerNodes = nodes.filter(node => node.layer === layer);
-            const nextLayerNodes = nodes.filter(node => node.layer === layer + 1);
+            // const nextLayerNodes = nodes.filter(node => node.layer === layer + 1);
             
             for (let i = 0; i < currentLayerNodes.length; i++) {
                 const currentNode = currentLayerNodes[i];
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
         svg.appendChild(nodeGroup);
         
         // Reset game state
-        currentPlayer = 1;
+        currentPlayer = firstToPlay;
         scores = [0, 0];
         gameFinished = false;
         
@@ -323,10 +324,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for buttons
     const gameOverElement = document.getElementById('game-over');
     document.getElementById('restart-btn').addEventListener('click', initializeBoard);
-    document.getElementById('play-again-btn').addEventListener('click', function() {
+    document.getElementById('play-again-btn').addEventListener('click', () => {
         gameOverElement.style.display = 'none';
         initializeBoard();
     });
+    document.getElementById('boardSize').addEventListener('change', function() {
+        currentNumLayers = Number(this.value);
+        initializeBoard();
+    });
+    document.getElementById('firstToPlay').addEventListener('change', (e) => {
+        if (e.target.name === 'firstPlayer' && e.target.type === 'radio') {
+            firstToPlay = Number(e.target.value);
+            initializeBoard();
+        }
+    }); 
     
     // Initialize the game
     initializeBoard();

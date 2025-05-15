@@ -99,7 +99,7 @@ button:hover {
 
 .node {
     fill: #333;
-    r: 6;
+    /* r: 6; */
     cursor: pointer;
 }
 
@@ -160,4 +160,10 @@ button:hover {
 
 .player-2-text {
     color: #ff0000;
+}
+
+#firstToPlay {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

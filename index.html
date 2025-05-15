@@ -18,7 +18,21 @@
                 <div class="player-score" id="score2">0</div>
             </div>
         </div>
+
         <button id="restart-btn">Restart Game</button>
+
+        <label for="boardSize">Change board size:</label>
+        <select id="boardSize" name="boardSize">
+            <option value="4"> 4 </option>
+            <option value="6" selected> 6 </option>
+            <option value="8"> 8 </option>
+        </select>
+
+        <label>Change first to play:</label>
+        <div id="firstToPlay">
+            <label for="firstPlayer1"><input type="radio" id="firstPlayer1" name="firstPlayer" value="1" checked> Player 1</label>
+            <label for="firstPlayer2"><input type="radio" id="firstPlayer2" name="firstPlayer" value="2"> Player 2</label>
+        </div>
     </div>
         
     <svg id="board-svg" class="board-svg" width="600" height="520"></svg>
