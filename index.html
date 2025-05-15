@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
+    <div class="menu-panel">
         <div class="score-panel">
             <div class="player player-1 active" id="player1">
                 <div class="player-name">Player 1</div>
@@ -18,17 +18,16 @@
                 <div class="player-score" id="score2">0</div>
             </div>
         </div>
-        
-        <div class="game-board">
-            <button id="restart-btn">Restart Game</button>
-            <svg id="board-svg" class="board-svg" width="600" height="520"></svg>
-            <div class="game-over" id="game-over">
-                <div class="winner" id="winner-text"></div>
-                <button id="play-again-btn">Play Again</button>
-            </div>
-        </div>
+        <button id="restart-btn">Restart Game</button>
     </div>
+        
+    <svg id="board-svg" class="board-svg" width="600" height="520"></svg>
 
+    <div class="game-over" id="game-over">
+        <div class="winner" id="winner-text"></div>
+        <button id="play-again-btn">Play Again</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

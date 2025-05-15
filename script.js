@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update UI
         updateScoreDisplay();
         updatePlayerTurn();
-        document.getElementById('game-over').style.display = 'none';
+        gameOverElement.style.display = 'none';
     }
     
     // Handle line click event
@@ -307,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show game over screen
     function showGameOver() {
-        const gameOverElement = document.getElementById('game-over');
         const winnerTextElement = document.getElementById('winner-text');
         
         if (scores[0] > scores[1]) {
@@ -322,9 +321,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Event listeners for buttons
+    const gameOverElement = document.getElementById('game-over');
     document.getElementById('restart-btn').addEventListener('click', initializeBoard);
     document.getElementById('play-again-btn').addEventListener('click', function() {
-        document.getElementById('game-over').style.display = 'none';
+        gameOverElement.style.display = 'none';
         initializeBoard();
     });
     

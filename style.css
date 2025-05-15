@@ -1,29 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Lato', 'Montserrat', 'Roboto', sans-serif;
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('assets/TriConnect\ BG.png');
+    background-image: url('assets/TriConnect_BG.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    gap: 50px;
 }
 
-.game-container {
-    display: flex;  
+.menu-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(241, 191, 191, 0.5);
+    gap: 20px;
 }
 
 .score-panel {
     padding: 20px;
     border-radius: 10px;    
     width: 200px;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* height: fit-content; */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
 }
 
 .player {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     padding: 10px;
     border-radius: 5px;
 }
@@ -54,22 +73,6 @@ body {
     margin-top: 5px;
 }
 
-.game-board {
-    width: 600px;
-    padding: 30px;
-    border-radius: 10px;
-    position: relative;
-}
-
-/* .buttons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-} */
-
 button {
     padding: 10px 15px;
     border: none;
@@ -85,9 +88,10 @@ button:hover {
     background-color: #976502;
 }
 
-#new-game-btn {
-    display: none;
-}
+/* #restart-btn {
+    padding: 0;
+    height: fit-content;
+} */
 
 .board-svg {
     display: block;
@@ -147,6 +151,7 @@ button:hover {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: white;
 }
 
 .player-1-text {
