@@ -6,6 +6,7 @@
     <title>TriConnect</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="menu-panel">
         <div class="score-panel">
@@ -19,7 +20,10 @@
             </div>
         </div>
 
+        <div id="ai-status" style="text-align: center; margin: 10px 0; color: #333;">Your turn</div>
+
         <button id="restart-btn">Restart Game</button>
+        <button id="new-game-btn" style="display: none;">New Game</button>
 
         <label for="boardSize">Change board size:</label>
         <select id="boardSize" name="boardSize">
