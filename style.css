@@ -30,7 +30,7 @@ body {
 }
 
 .score-panel {
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;    
     width: 200px;
     display: flex;
@@ -46,11 +46,13 @@ body {
     gap: 30px;
 }
 
-.column-align {
+.setting {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .player {
@@ -89,12 +91,13 @@ body {
 button {
     padding: 10px 15px;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: #d86902;
     color: white;
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: 5px outset maroon;
 }
 
 button:hover {
@@ -179,4 +182,33 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+#ai-status {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: purple;
+    text-shadow: 2px 2px 5px violet;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    background: darkorange; 
+    width: 100%; 
+    height: 10px; 
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    background: maroon; 
+    cursor: pointer;
+    border-radius: 80%; 
 }
