@@ -246,7 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateScoreDisplay();
         updatePlayerTurn();
         document.getElementById('game-over').style.display = 'none';
-        document.getElementById('new-game-btn').style.display = 'none';
         enableBoardInteraction();
 
         // If AI is first, trigger its move
@@ -275,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (triangles.every(triangle => triangle.completed)) {
             gameFinished = true;
             showGameOver();
-            document.getElementById('new-game-btn').style.display = 'block';
             return;
         }
 
@@ -650,7 +648,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listeners for buttons
     document.getElementById('restart-btn').addEventListener('click', initializeBoard);
-    document.getElementById('new-game-btn').addEventListener('click', initializeBoard);
     document.getElementById('play-again-btn').addEventListener('click', function() {
         document.getElementById('game-over').style.display = 'none';
         initializeBoard();
