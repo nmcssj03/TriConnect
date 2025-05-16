@@ -341,9 +341,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('ai-status').textContent = "Game Over!";
 
         if (scores[0] > scores[1]) {
-            winnerTextElement.innerHTML = 'Player <span class="player-1-text">1 (You)</span> wins!';
+            winnerTextElement.innerHTML = '<span class="player-1-text"> You </span> win!';
         } else if (scores[1] > scores[0]) {
-            winnerTextElement.innerHTML = 'Player <span class="player-2-text">2 (AI)</span> wins!';
+            winnerTextElement.innerHTML = '<span class="player-2-text">TriCon AI</span> wins!';
         } else {
             winnerTextElement.textContent = 'It\'s a tie!';
         }
