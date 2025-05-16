@@ -9,7 +9,10 @@
 
 <body>
     <div class="menu-panel">
+        
         <div class="score-panel">
+            <span id="ai-status">Your turn</span>
+            <h2>Score:</h2>
             <div class="player player-1 active" id="player1">
                 <div class="player-name">You</div>
                 <div class="player-score" id="score1">0</div>
@@ -19,19 +22,22 @@
                 <div class="player-score" id="score2">0</div>
             </div>
         </div>
+        
 
-        <span id="ai-status" style="text-align: center; margin: 10px 0; color: #333;">Your turn</span>
-
-        <button id="restart-btn">Restart Game</button>
-
-        <label for="boardSize">Change board size:</label>
-        <input type="range" id="boardSize" name="boardSize" min="4" max="8" step="1" value="6">
-        <span id="boardSizeValue"> 6 </span>
-
-        <label>Change first to play:</label>
-        <div id="firstToPlay">
-            <label for="firstPlayer1"><input type="radio" id="firstPlayer1" name="firstPlayer" value="1" checked> You</label>
-            <label for="firstPlayer2"><input type="radio" id="firstPlayer2" name="firstPlayer" value="2"> TriCon AI</label>
+        <div class="settings-panel">
+            <button id="restart-btn">Restart Game</button>
+            <div class="column-align">
+                <label for="boardSize">Change board size:</label>
+                <input type="range" id="boardSize" name="boardSize" min="4" max="8" step="1" value="6">
+                <span id="boardSizeValue"> 6 </span>
+            </div>
+            <div class="column-align">
+                <label>Change first to play:</label>
+                <div id="firstToPlay">
+                    <label for="firstPlayer1"><input type="radio" id="firstPlayer1" name="firstPlayer" value="1" checked> You</label>
+                    <label for="firstPlayer2"><input type="radio" id="firstPlayer2" name="firstPlayer" value="2"> TriCon AI</label>
+                </div>
+            </div>
         </div>
     </div>
         

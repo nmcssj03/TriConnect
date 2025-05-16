@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let BOARD_WIDTH = 700; // SVG width
     let BOARD_HEIGHT = 600; // SVG height
     let LAYERS = 6;
-    const NODE_RADIUS = 6;
+    const NODE_RADIUS = 10;
     let HORIZONTAL_SPACING = (BOARD_WIDTH - 100) / (LAYERS -1); // Adjusted for padding
     let VERTICAL_SPACING = (BOARD_HEIGHT - 100) / (LAYERS -1);   // Adjusted for padding
     const SVG_PADDING = 50; // Padding around the pyramid
