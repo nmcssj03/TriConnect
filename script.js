@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Game constants
-    let BOARD_WIDTH = 600; // SVG width
-    let BOARD_HEIGHT = 500; // SVG height
+    let BOARD_WIDTH = 700; // SVG width
+    let BOARD_HEIGHT = 600; // SVG height
     let LAYERS = 6;
     const NODE_RADIUS = 6;
     let HORIZONTAL_SPACING = (BOARD_WIDTH - 100) / (LAYERS -1); // Adjusted for padding
@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
         svg.appendChild(nodeGroup);
 
         // Reset game state
+        document.getElementById('boardSizeValue').textContent = LAYERS;
         const firstPlayerRadios = document.getElementsByName('firstPlayer');
         currentPlayer = parseInt([...firstPlayerRadios].find(radio => radio.checked).value);
         scores = [0, 0];

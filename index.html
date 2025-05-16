@@ -26,11 +26,8 @@
         <button id="new-game-btn" style="display: none;">New Game</button>
 
         <label for="boardSize">Change board size:</label>
-        <select id="boardSize" name="boardSize">
-            <option value="4"> 4 </option>
-            <option value="6" selected> 6 </option>
-            <option value="8"> 8 </option>
-        </select>
+        <input type="range" id="boardSize" name="boardSize" min="4" max="8" step="1" value="6">
+        <span id="boardSizeValue"> 6 </span>
 
         <label>Change first to play:</label>
         <div id="firstToPlay">
